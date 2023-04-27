@@ -1,0 +1,1 @@
+/home/subhuman/.config/nvim/init.vim

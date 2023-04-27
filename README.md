@@ -1,2 +1,2 @@
 # Configs
-my configs
+hello world
