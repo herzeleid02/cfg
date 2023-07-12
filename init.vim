@@ -8,12 +8,15 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "
 "set shellcmdflag=-ic
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
+"highlight Cursor guifg=yellow guibg=black
 "highlight CursorLine guibg=NONE ctermbg=NONE
 hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
 hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 
 " Aliases
 command Date1 read !date '+\%d \%B \%Y, \%A, Week \%W'
+command CopyC normal gg"+yG
+command CC CopyC
 "alias date1="date '+%d %B %Y, %A, Week %W'"
 
 " Numbers
@@ -39,14 +42,17 @@ call plug#begin()
 "   - Avoid using standard Vim directory names like 'plugin'
 "   Make sure you use single quot
 
+"call plug#begin('~/.config/nvim/plugged')
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'nvim-neo-tree/neo-tree.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-lua/plenary.nvim'
+"Plug 'preservim/nerdtree'
 
 call plug#end()
 
-
-
 let g:table_mode_corner='|'
-
-
 
