@@ -15,8 +15,9 @@ hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none g
 
 " Aliases
 command Date1 read !date '+\%d \%B \%Y, \%A, Week \%W'
-command CopyC normal gg"+yG
-command CC CopyC
+" command CopyC normal gg"+yG
+" command CC CopyC
+" deprecated by `%+y`
 "alias date1="date '+%d %B %Y, %A, Week %W'"
 
 " Numbers
